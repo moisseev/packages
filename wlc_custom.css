@@ -1,0 +1,440 @@
+*  {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    /*overflow-x: visible;*/
+    background: url(../img/bkg/loginGround.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+div td span {
+    display: inline-block;
+}
+
+.langLbl, .welcome, LABEL, .AlertMess,
+.orgSelHeader, .orgSelSubtitle, .filSelHeader {
+    font-family: Arial;
+}
+
+.orgSelLine, .filSelLine {
+    display: inline-block;
+    padding-top: 5px;
+    padding-left: 1px;
+    border-top: 1px solid #cccccc;
+    height: 70px;
+}
+
+.orgSelSubtitle, .filSelSubtitle, .pkiSubtitle {
+    height: 25px;
+    padding-left: 1px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.skSubtitle {
+    height: 27px;
+    padding-left: 1px;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #cccccc;
+}
+
+.nobr {white-space: nowrap;}
+
+.ldWrapper {
+    border-radius: 7px;
+    border: 1px solid;
+    box-shadow: 5px 5px 30px gray;
+    /*padding:3px;*/
+    margin-top: 24px;
+}
+
+.ldWrapper SPAN {
+    /*float: left;*/
+    margin: 5px 0;
+    padding-top: 2px;
+}
+
+/* т.к. блок steps скрыт
+.wayLine {
+}
+
+td#txt {
+}
+
+td.txi {
+}
+*/
+
+
+#dialogBox {
+    width: 100%;
+    position: relative;
+    min-width: 471px;
+    max-width: 471px;
+}
+
+#dialogBox.dialogBox-wide {
+    max-width: 700px;
+}
+
+#dialogBox #wm {
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    opacity: 0.6;
+    border-radius: 7px;
+    margin: 24px 0;
+}
+
+#dialogBox #wm img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+
+
+#dialogBox #wm img + * {
+    visibility: hidden;
+}
+
+.nobr {
+    display: inline-block;
+}
+
+#mtbl {
+    width: 100%;
+    max-width: 440px;
+}
+
+.welcome {
+    width: 350px;
+    /*height: 25px;*/
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    margin: 12px auto;
+}
+
+.welcome:first-line,
+.welcome::first-line {
+    font-weight: normal;
+}
+
+.orgSelHeader,
+.filSelHeader,
+.pkiHeader {
+    font-size: 22px;
+    height: 50px;
+    padding-top: 10px;
+}
+
+.ldWrapper > div {
+    background-color: transparent;
+    width: 100%;
+    height: auto;
+    padding: 5px 30px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.ldWrapper input,
+.ldWrapper input,
+.ldWrapper input.ldInp {
+    height: auto;
+    font: 500 16px/20px Arial;
+    padding: 12px 14px 10px;
+    margin: 0 0 10px 0;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.ldWrapper input[type=radio],
+.ldWrapper input[type=checkbox] {
+    height: 24px;
+    padding: 0;
+    margin: 0 5px 0 2px;
+    width: auto;
+    box-shadow: none;
+}
+
+.loginBtn {
+    position: relative;
+    height: 60px;
+}
+
+.loginBtn button {
+    display: block;
+    width: auto;
+    margin: 10px auto;
+}
+
+.ldWrapper #mS {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 0;
+    margin: 12px auto;
+    height: 50px;
+    font-size: 12px;
+}
+
+.ldWrapper #mT span,
+.ldWrapper #mX span {
+    margin: 0;
+}
+
+.ldWrkScr #mT tr:not(:last-child) td,
+.ldWrkScr #mX tr:not(:last-child) td {
+    padding: 0 0 5px;
+}
+
+.ldWrapper #mS1 {
+    height: 75px;
+    padding-top: 10px;
+}
+
+#DivGlobalID {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /*margin: 0 auto;*/
+    /*min-height: 100%;*/
+    min-height: 100vh;
+    width: 100%;
+    min-width: 730px;
+    transition: opacity .25s;
+    padding: 0;
+}
+
+#header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: 105px;
+    color: white;
+    padding-left: 30px;
+    white-space: nowrap;
+}
+
+#header div:not([id=lngsl]) {
+    width: auto;
+    font-size: 16px;
+    font-weight: bolder;
+    text-decoration: none;
+    padding-right: 10px;
+}
+
+#header div:first-child {
+    width: 35%;
+    height: 90%;
+}
+
+#header div:first-child img{
+    height: 100%;
+}
+
+#header span,
+#header a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+#main {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /*  -ms-flex-preferred-size: auto;*/
+    width: 100%;
+    justify-content: flex-start;
+}
+
+#footer {
+    width: 100%;
+    height: 80px;
+    padding: 0 40px 6px;
+    transition: padding-right 0.25s, padding-left 0.25s;
+}
+
+#footer table {
+    width: 100%;
+    /*height: 100%;*/
+    /*table-layout: fixed;*/
+    border-spacing: 0;
+}
+
+#footer table td {
+    width: 50%;
+    vertical-align: bottom;
+    padding: 0;
+}
+
+#footer * {
+    color: #373737;/*white*/
+}
+
+@media only screen and (max-width: 730px) {
+    #footer {
+        padding: 0 20px 6px;
+    }
+}
+
+#content {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: center;
+    position: absolute;
+    top: 75px;
+    right: 2%;
+    justify-content: flex-end;
+}
+
+#steps {
+    max-width: 0;
+    overflow: hidden;
+}
+
+#LgPdLb {
+    display: none;
+}
+
+.ldWrapper label {
+    width: fit-content;
+    margin: auto;
+    font-size: 16px;
+}
+
+.ldWrapper label span {
+    font: 500 18px/22px Arial;
+    /*margin: 10px 0 8px;*/
+}
+
+.login-form-group {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+}
+
+.login-form-group .AlertMess {
+    border: 1px solid transparent/*#DEDFDE*/;
+    padding: 0px;
+    /*line-height: 18px;*/
+    /*    border-radius: 5px;
+        padding-left: 22px;*/
+}
+
+.ldWrapper button {
+    font: 500 16px/24px Arial;
+    font-size: 16px;
+    text-align: center;
+    padding: 13px 25px;
+    border-radius: 5px;
+    height: auto;
+}
+
+.ldWrkScr {
+    width: 100%;
+    min-height: 150px;
+    overflow: auto;
+    max-height: 200px;
+    border: 0 solid;
+    padding: 2px 5px;
+}
+
+#selectMain,
+#blOtherOrgs {
+    float: left;
+    width: 50%;
+}
+
+#selectMain {
+    padding-right: 10px;
+}
+#selectMain .orgSelLine {
+    font-size: larger;
+}
+#blOtherOrgs {
+    padding-left: 10px;
+}
+
+#selectMain input + label,
+#blOtherOrgs input + label{
+    font-weight: normal;
+}
+
+#selectMain input:checked + label,
+#blOtherOrgs input:checked + label{
+    font-weight: bold;
+}
+
+#selectMain div div,
+div#DvShow div {
+    padding-top: 5px;
+}
+
+#load,
+#bPlugin div {
+    font-size: 14px;
+}
+
+#bPlugin #versionError {
+    display: none;
+}
+
+BODY {
+  background:url('../img/bkg/fon.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
