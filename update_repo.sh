@@ -1,7 +1,15 @@
 #!/bin/sh
 
 # Update repo
-pkg repo FreeBSD:14:amd64 && git add -A && git commit -m "Update repo"
+pkg repo FreeBSD:15:amd64
+
+if [ $? -ne 0 ]; then
+    echo "Failed to create repository"
+    exit 1
+fi
+
+# Add all files including the new repository metadata
+git add -A && git commit -m "Update repo"
 [ $? -eq 0 ] || exit 1
 
 #
